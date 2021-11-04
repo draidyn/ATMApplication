@@ -9,7 +9,7 @@ namespace ATMApplication
     /// <summary>
     /// Account class.
     /// </summary>
-    public class Account
+    internal class Account
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Account"/> class.
@@ -20,7 +20,7 @@ namespace ATMApplication
         /// <param name="bankName">Banks name.</param>
         /// <param name="cardNumber">Card Number.</param>
         /// <param name="pin">Card Pin.</param>
-        public Account(string customerName, string accountNumber, string balance2, string bankName, string cardNumber, string pin)
+        internal Account(string customerName, string accountNumber, string balance2, string bankName, string cardNumber, string pin)
         {
             this.AccountNumber = accountNumber;
             this.Balance = balance2;
@@ -33,36 +33,36 @@ namespace ATMApplication
         /// <summary>
         /// Gets or sets the accounts balance.
         /// </summary>
-        public string Balance { get; set; }
+        internal string Balance { get; set; }
 
         /// <summary>
         /// Gets or sets the account number.
         /// </summary>
-        public string AccountNumber { get; set; }
+        internal string AccountNumber { get; private set; }
 
         /// <summary>
         /// Gets or sets the bannk name of the account.
         /// </summary>
-        public string BankName { get; set; }
+        internal string BankName { get; private set; }
 
         /// <summary>
         /// Gets or sets the account holder.
         /// </summary>
-        public string AccountHolderName { get; set; }
+        internal string AccountHolderName { get; private set; }
 
         /// <summary>
         /// Gets or sets the accounts pin number.
         /// </summary>
-        public string PIN { get; set; }
+        internal string PIN { get; private set; }
 
         /// <summary>
         /// Gets or sets the card number.
         /// </summary>
-        public string CardNumber { get; set; }
+        internal string CardNumber { get; private set; }
 
         /// <summary>
         /// Gets or sets the customer name.
         /// </summary>
-        public string CustomerName { get; set; }
+        internal string CustomerName { get; private set; }
     }
 }

@@ -13,7 +13,7 @@ namespace ATMApplication
     /// <summary>
     /// Main driver of the ATM program. Represents the software running on the physical ATM.
     /// </summary>
-    public class Program
+    internal class Program
     {
         /// <summary>
         /// Main driver of the program.
