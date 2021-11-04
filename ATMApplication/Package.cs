@@ -18,7 +18,7 @@ namespace ATMApplication
         /// </summary>
         /// <param name="wallet">Wallet that represents a list of all the debit cards.</param>
         /// <param name="accounts">All the users accounts.</param>
-        internal Package(List<DebitCard> wallet, List<Account> accounts)
+        internal Package(List<Card> wallet, List<Account> accounts)
         {
             this.Wallet = wallet;
             this.Accounts = accounts;
@@ -28,7 +28,7 @@ namespace ATMApplication
         /// Gets or sets the list of debit cards in the wallet.
         /// </summary>
         /// <returns>The list of debit cards in the wallet.</returns>
-        internal List<DebitCard> Wallet { get; set; }
+        internal List<Card> Wallet { get; set; }
 
         /// <summary>
         /// Gets or sets the list of accounts.

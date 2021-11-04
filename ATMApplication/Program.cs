@@ -23,10 +23,10 @@ namespace ATMApplication
         {
             Package packet = GeneratePackageOfAccounts(); // generates the wallet with a list of debit cards.
 
-            List<DebitCard> listOfUsersCards = packet.Wallet;
+            List<Card> listOfUsersCards = packet.Wallet;
             List<Account> listOfAccounts = packet.Accounts;
 
-            DebitCard usersSelectedDebitCard = SelectCard(listOfUsersCards);
+            Card usersSelectedDebitCard = SelectCard(listOfUsersCards);
             Account customerAccount = VerifyPIN(listOfAccounts, usersSelectedDebitCard);
 
             if (customerAccount != null)
@@ -202,7 +202,7 @@ namespace ATMApplication
         /// <param name="accounts">List of all the accounts.</param>
         /// <param name="card">The users selected card.</param>
         /// <returns>Whether the entered pin matches the cards pin.</returns>
-        private static Account VerifyPIN(List<Account> accounts, DebitCard card)
+        private static Account VerifyPIN(List<Account> accounts, Card card)
         {
             Console.Write("Enter PIN Number: ");
             string response = Console.ReadLine();
@@ -231,7 +231,7 @@ namespace ATMApplication
         /// </summary>
         /// <param name="wallet">List of the users debit cards.</param>
         /// <returns>Selected Debit card.</returns>
-        private static DebitCard SelectCard(List<DebitCard> wallet)
+        private static Card SelectCard(List<Card> wallet)
         {
             Console.WriteLine("Select card to insert into the ATM?");
             for (int x = 0; x < wallet.Count; x++)
@@ -253,7 +253,7 @@ namespace ATMApplication
         /// <returns>Package containing debit cards and accounts.</returns>
         private static Package GeneratePackageOfAccounts()
         {
-            List<DebitCard> wallet = new ();
+            List<Card> wallet = new ();
             List<Account> accounts = new ();
 
             StreamReader br = new ("Accounts.txt");
@@ -277,7 +277,7 @@ namespace ATMApplication
                 accounts.Add(account);
 
                 // create debit card with given information.
-                DebitCard card = new (bank_name, cust_name, card_num, account_num);
+                Card card = new (bank_name, cust_name, card_num, account_num);
                 wallet.Add(card); // add debit card to wallet.
             }
 

@@ -9,7 +9,7 @@ namespace ATMApplication
     /// <summary>
     /// Default Debit card constructor.
     /// </summary>
-    internal class DebitCard
+    internal class Card
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DebitCard"/> class.
@@ -19,7 +19,7 @@ namespace ATMApplication
         /// <param name="customerName">Customers name.</param>
         /// <param name="cardNumber">Card number.</param>
         /// <param name="accountNumber">account number.</param>
-        internal DebitCard(string bankName, string customerName, string cardNumber, string accountNumber)
+        internal Card(string bankName, string customerName, string cardNumber, string accountNumber)
         {
             this.BankName = bankName;
             this.CardNumber = cardNumber;
