@@ -1,0 +1,4 @@
+BankName - Customer fname - card number - account number - pin number - Account balance
+Wells Fargo-Andrew Chimbanga-1234567890123456-84853453-0000-13973.23
+Chase Bank-Andrew Chimbanga-3456789012345678-14142345-1111-27.11
+BECU-Andrew Chimbanga-7890123456789012-16-23451345-345.98
